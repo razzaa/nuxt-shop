@@ -1,10 +1,10 @@
 <template>
-<div class="h-screen w-full">
-  <div class="bg-gray-800 h-screen mx-auto max-w-md">
+<div class="h-screen w-full bg-gray-800">
+  <div class="h-screen mx-auto max-w-screen-sm">
     <div class="p-12">
       <p class="text-5xl pt-10 text-yellow-500 font-bold">
-        Welcome to<br />
-        Family
+        Welcome to
+        Company
       </p>
       <p class="text-xl py-3 text-gray-400 font-semibold">Sign up to continue</p>
     </div>
