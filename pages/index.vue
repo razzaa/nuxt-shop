@@ -1,14 +1,17 @@
 <template>
   <div class="container">
-    <Sidebar />
+    <Navbar />
+    <!-- <Sidebar /> -->
   </div>
 </template>
 
 <script>
- import Sidebar from '@/components/Sidebar'
+ import Navbar from '@/components/Navbar'
+//  import Sidebar from '@/components/Sidebar'
  export default {
   components: {
-    Sidebar
+    // Sidebar,
+    Navbar
   }
  }
 </script>

@@ -26,7 +26,6 @@ export default {
   },
   loading: {
     color: '#F49E0A',
-    height: '5px'
   },  // Global CSS: https://go.nuxtjs.dev/config-css
   loadingIndicator: {
     name: 'circle',
@@ -61,24 +60,46 @@ export default {
     baseURL: "http://127.0.0.1:8000/api"
   },
 
+  // auth: {
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         login: {
+  //           url: "login",
+  //           method: "post",
+  //           propertyName: "meta.token"
+  //         },
+  //         user: {
+  //           url: "user",
+  //           method: "get",
+  //           propertyName: "data"
+  //         },
+  //         logout: {
+  //           url: "logout",
+  //           method: "post"
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
   auth: {
     strategies: {
       local: {
+        token: {
+          property: 'meta.token',
+          global: true,
+          // required: true,
+          // type: 'Bearer'
+        },
+        user: {
+          property: 'user',
+          // autoFetch: true
+          propertyName: 'data'
+        },
         endpoints: {
-          login: {
-            url: "login",
-            method: "post",
-            propertyName: "meta.token"
-          },
-          user: {
-            url: "user",
-            method: "get",
-            propertyName: "data"
-          },
-          logout: {
-            url: "logout",
-            method: "post"
-          }
+          login: { url: '/login', method: 'post' },
+          logout: { url: '/logout', method: 'post' },
+          user: { url: '/user', method: 'get' , propertyName: 'data'}
         }
       }
     }
