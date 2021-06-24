@@ -3,8 +3,8 @@
   <div class="bg-gray-800 h-screen mx-auto max-w-md">
     <div class="p-12">
       <p class="text-5xl pt-10 text-yellow-500 font-bold">
-        Welcome <br />
-        Back
+        Welcome to<br />
+        Family
       </p>
       <p class="text-xl py-3 text-gray-400 font-semibold">Sign up to continue</p>
     </div>
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="w-full p-12">
-      <button class=" bg-yellow-500 p-3 rounded-3xl w-full h-full hover:bg-yellow-600"> Login</button>
+      <button class=" bg-yellow-500 p-3 rounded-3xl w-full h-full hover:bg-yellow-600"> Sign up</button>
       <p class="mx-auto text-center mt-3 text-gray-400">have an account?  <nuxt-link to="signin" class="text-md font-semibold">Sign in</nuxt-link> </p>
     </div>
   </div>

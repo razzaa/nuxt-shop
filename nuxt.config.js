@@ -24,8 +24,15 @@ export default {
       }
     ]
   },
-  loading: { color: '#fa923f'},
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  loading: {
+    color: '#F49E0A',
+    height: '5px'
+  },  // Global CSS: https://go.nuxtjs.dev/config-css
+  loadingIndicator: {
+    name: 'circle',
+    color: '#F49E0A',
+    background: 'white'
+  },
   css: [
   ],
 
