@@ -35,11 +35,11 @@
         <label for="toggle" class="text-xs text-gray-300 mt-1">remeber me</label>
       </div>
       <div class="bg mt-1 text-xs text-gray-300">
-        <nuxt-link to="#">forget password?</nuxt-link></div>
+        <nuxt-link to="/forget-password">forget password?</nuxt-link></div>
     </div>
     <div class="w-full p-12">
       <button class=" bg-yellow-500 p-3 rounded-3xl w-full h-full hover:bg-yellow-600"> Login</button>
-      <p class="mx-auto text-center mt-3 text-gray-400">don't have an account?  <nuxt-link to="signup" class="text-md font-semibold">Sign up</nuxt-link> </p>
+      <p class="mx-auto text-center mt-3 text-gray-400">Don't have an account?  <nuxt-link to="signup" class="text-md font-semibold">Sign up</nuxt-link> </p>
     </div>
   </div>
 </div>

@@ -30,7 +30,7 @@
     </div>
     <div class="w-full p-12">
       <button class=" bg-yellow-500 p-3 rounded-3xl w-full h-full hover:bg-yellow-600"> Sign up</button>
-      <p class="mx-auto text-center mt-3 text-gray-400">have an account?  <nuxt-link to="signin" class="text-md font-semibold">Sign in</nuxt-link> </p>
+      <p class="mx-auto text-center mt-3 text-gray-400">Have an account?  <nuxt-link to="signin" class="text-md font-semibold">Sign in</nuxt-link> </p>
     </div>
   </div>
 </div>
