@@ -1,7 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  router: {
+    base: '/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-shop',
@@ -14,11 +16,22 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ],
+    script: [
+      {
+        src: 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'
+      }
     ]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  loading: {
+    color: '#F49E0A',
+  },  // Global CSS: https://go.nuxtjs.dev/config-css
+  loadingIndicator: {
+    name: 'circle',
+    color: '#F49E0A',
+    background: 'white'
+  },
   css: [
   ],
 
@@ -39,10 +52,58 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: "http://127.0.0.1:8000/api"
+  },
+
+  // auth: {
+  //   strategies: {
+  //     local: {
+  //       endpoints: {
+  //         login: {
+  //           url: "login",
+  //           method: "post",
+  //           propertyName: "meta.token"
+  //         },
+  //         user: {
+  //           url: "user",
+  //           method: "get",
+  //           propertyName: "data"
+  //         },
+  //         logout: {
+  //           url: "logout",
+  //           method: "post"
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'meta.token',
+          global: true,
+          // required: true,
+          // type: 'Bearer'
+        },
+        user: {
+          property: 'user',
+          // autoFetch: true
+          propertyName: 'data'
+        },
+        endpoints: {
+          login: { url: '/login', method: 'post' },
+          logout: { url: '/logout', method: 'post' },
+          user: { url: '/user', method: 'get' , propertyName: 'data'}
+        }
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
